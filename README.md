@@ -1,1 +1,21 @@
-make sure to rename the vscode folder to ".vscode" .
+in the vscode folder , make sure to include these arguments if you're not using cmake:
+                "-g",
+                "-std=c++20",
+                "-static",
+                "-I${workspaceFolder}/include",
+                "-I${workspaceFolder}/include/imGUI",
+                "-L${workspaceFolder}/lib",
+                "${workspaceFolder}/src/main.cpp",
+                "${workspaceFolder}/src/glad.c",
+                "-I${workspaceFolder}/src",
+                "-I${workspaceFolder}/shaders",
+                "${workspaceFolder}/include/imGUI/imgui.cpp",
+                "${workspaceFolder}/include/imGUI/imgui_draw.cpp",
+                "${workspaceFolder}/include/imGUI/imgui_tables.cpp",
+                "${workspaceFolder}/include/imGUI/imgui_widgets.cpp",
+                "${workspaceFolder}/include/imGUI/imgui_impl_glfw.cpp",
+                "${workspaceFolder}/include/imGUI/imgui_impl_opengl3.cpp",
+                "-lglfw3dll",
+                "-Iinclude",
+                "-o",
+                "${workspaceFolder}/window.exe"
